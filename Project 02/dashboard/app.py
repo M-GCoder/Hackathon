@@ -1,4 +1,9 @@
 # dashboard/app.py
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import streamlit as st
 import pandas as pd
 import plotly.graph_objs as go 
@@ -7,7 +12,6 @@ from etl.extract import fetch_and_cache_intraday, cache_path
 from etl.transform import parse_intraday_json
 from etl.load import save_clean_df, load_clean_df_if_exists
 from analysis.finance_analysis import add_moving_averages, compute_basic_stats, add_returns
-import os
 from analysis.finance_analysis import add_moving_averages, compute_basic_stats, add_returns, add_rsi, analyze_candlesticks, generate_signals
 from groq import Groq
 import json
@@ -329,4 +333,5 @@ st.caption("Data source: Alpha Vantage (Intraday). Cache TTL helps avoid hitting
 
 # Add the final disclaimer
 st.markdown("---")
+
 st.warning("**Disclaimer:** Stock market predictions are inherently uncertain. The information and indicators presented are for educational and informational purposes only and do not constitute financial advice. Always conduct your own research before making any investment decisions.")
