@@ -3,3 +3,4 @@ pandas
 streamlit
 python-dotenv
 groq
+requests
