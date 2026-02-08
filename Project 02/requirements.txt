@@ -1,5 +1,0 @@
-pandas
-plotly
-streamlit
-requests
-python-dotenv
