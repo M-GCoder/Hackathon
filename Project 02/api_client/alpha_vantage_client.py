@@ -3,11 +3,8 @@ import os
 import time
 import requests
 from typing import Dict, Any
-from dotenv import load_dotenv
 
-load_dotenv()
-
-API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
+API_KEY = 66KJSETFZK7VCGJ5
 
 BASE_URL = "https://www.alphavantage.co/query"
 
@@ -57,4 +54,5 @@ class AlphaVantageClient:
             "outputsize": outputsize,
             "datatype": "json",
         }
+
         return self._call_api(params)
