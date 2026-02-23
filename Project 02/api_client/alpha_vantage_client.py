@@ -5,6 +5,7 @@ import requests
 from typing import Dict, Any
 
 API_KEY = 66KJSETFZK7VCGJ5
+api_key = 66KJSETFZK7VCGJ5
 
 BASE_URL = "https://www.alphavantage.co/query"
 
@@ -56,3 +57,4 @@ class AlphaVantageClient:
         }
 
         return self._call_api(params)
+
